@@ -21,6 +21,7 @@ o2-sim-serial-run5 -n 50 -g boxgen -m TRK FT3 TF3 --seed 1 \
 o2-steer-colcontexttool -i o2sim,200000,50:50 --use-existing-kine \
   --with-vertices kNoVertex --orbits 3 --orbitsPerTF 32
 
+# ALMIRA response file; without --local-response-file the APTS response from CCDB is used
 o2-sim-digitizer-workflow -b --run --onlyDet TRK,FT3 \
   --interactionRate 200000 \
   --incontext collisioncontext.root \
